@@ -1,0 +1,7 @@
+{
+  "name": "eventwheel-game-ui",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
