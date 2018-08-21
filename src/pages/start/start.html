@@ -12,14 +12,10 @@
 
 </ion-header>
 
-
 <ion-content padding>
-  <p>Enter your name email or phone and start the game!</p>
-</ion-content>
-
-
-<ion-content padding>
-  <form (ngSubmit)="logForm()">
+  <p>Enter your name, email or phone and start the game!</p>
+  <ion-row style="height: 20px"></ion-row>
+  <form (ngSubmit)="submitDetails()">
     <ion-item>
       <ion-label stacked>Your name</ion-label>
       <ion-input type="text" [(ngModel)]="details.name" name="name"></ion-input>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { GameProvider } from '../../providers/game/game';
 
 /**
  * Generated class for the StartPage page.
@@ -21,11 +22,15 @@ export class StartPage {
     mobile : ''
   };
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public gameProvider: GameProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad StartPage');
+  }
+
+  submitDetails() {
+    this.gameProvider.submitDetails();
   }
 
 }
