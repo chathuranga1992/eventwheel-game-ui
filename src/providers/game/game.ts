@@ -11,16 +11,37 @@ import { Injectable } from '@angular/core';
 
 export class GameProvider {
 
-  API_URL = 'http://localhost:8000/';
+
+  API_URL = 'http://localhost/eventwheel-game-api/';
+  private reward = null;
 
   constructor(public http: HttpClient) {
-    console.log('Hello GameProvider Provider');
+    
   }
 
 
-  submitDetails () {
-    this.http.get(this.API_URL).subscribe((data) => {
-      console.log(data);
+  submitDetails (params) {
+    return new Promise((resolve, reject) => {
+      this.http.post(this.API_URL ,params).subscribe((data) => {
+        resolve(data);
+      });
+    });
+
+  }
+
+  setReward (item) {
+    this.reward = item;
+  }
+
+  getReward () {
+    return this.reward;
+  }
+
+  saveReward (params) {
+    return new Promise((resolve, reject) => {
+      this.http.post(this.API_URL ,params).subscribe((data) => {
+        resolve(data);
+      });
     });
   }
 

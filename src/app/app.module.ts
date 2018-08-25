@@ -8,13 +8,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { StartPage } from '../pages/start/start';
+import { GamePage } from '../pages/game/game';
+import { EndPage } from '../pages/end/end';
 import { GameProvider } from '../providers/game/game';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    StartPage
+    StartPage,
+    GamePage,
+    EndPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,9 @@ import { GameProvider } from '../providers/game/game';
   entryComponents: [
     MyApp,
     HomePage,
-    StartPage
+    StartPage,
+    GamePage,
+    EndPage
   ],
   providers: [
     StatusBar,
