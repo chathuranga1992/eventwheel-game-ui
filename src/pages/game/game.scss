@@ -1,0 +1,25 @@
+page-game {
+
+    img {
+        height: 50vh !important;
+        width: 100% !important;
+        align-items: center;
+        object-fit: contain;
+
+    }   
+    ion-img {
+        background: none;
+    }
+
+    img {
+        animation:spin 5s linear infinite;
+    }
+    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+    h3 {
+        text-align: center;
+    }
+
+}
